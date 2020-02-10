@@ -148,7 +148,7 @@ $(".ul-content-list1").find("a").on("click", function () {
             let zf=m3-index;
             index=m3;
             m2 = d1 - m3;
-            console.log(m2);
+            // console.log(m2);
             
             // console.log(s1);
             let dzx2 = parseFloat(span.style.left);
@@ -409,6 +409,34 @@ window.addEventListener("scroll", fn4);
         },10)
     })
 }()
+// icon滑上
+~function(){
+    $(".fs-item-3 .fs-item-d1 ul li").eq(0).mouseenter(function(){
+        $(".fsD2").addClass("fsaD2dd");
+        let a=$(this).index();
+        $(".fs-ul li").eq(a).addClass("active").siblings().removeClass("active");
+    })
+    $(".fs-item-3 .fs-item-d1 ul li").eq(1).mouseenter(function(){
+        $(".fsD2").addClass("fsaD2dd");
+        let a=$(this).index();
+        $(".fs-ul li").eq(a).addClass("active").siblings().removeClass("active");
+        
+    })
+    $(".fs-item-3 .fs-item-d1 ul li").eq(2).mouseenter(function(){
+        $(".fsD2").addClass("fsaD2dd");
+        let a=$(this).index();
+        $(".fs-ul li").eq(a).addClass("active").siblings().removeClass("active");
+    })
+    // a标签取消
+    $("#fsD2-a").click(function(){
+        $(".fsD2").removeClass("fsaD2dd");
+    })
+    // 三个li
+    $(".fs-ul li").hover(function(){
+        $(this).addClass("active").siblings().removeClass("active");
+    })
+}();
+
 
 
 
